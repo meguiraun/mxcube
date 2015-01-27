@@ -150,7 +150,7 @@ class PixelDetector:
               # make oscillation an asynchronous task => do not wait here
               self.oscillation_task = self.execute_command("do_oscillation", start, end, exptime, npass, wait=False)
           else:
-              time.sleep(0.2*exptime)
+              time.sleep(0.6*exptime)
 
               try:
                  self.oscillation_task.get(block=False)
